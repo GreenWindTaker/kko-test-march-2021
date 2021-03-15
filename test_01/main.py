@@ -1,17 +1,4 @@
 '''
-각각 크기가 m 및 n 인 정렬된 배열 arr1 및 arr2의 중앙값을 반환합니다.
-각각의 중앙 값이 아닌 합친 arr1과 arr2을 합친 내용에서의 중앙 값을 의미합니다.
-중앙 값이 두 개일 수 있는 경우 두 값의 평균을 반환합니다.
-Input: nums1 = [1,3], nums2 = [2]
-Output: 2.00000
-Input: nums1 = [1,2], nums2 = [3,4]
-Output: 2.50000
-Input: nums1 = [0,0], nums2 = [0,0]
-Output: 0.00000
-Input: nums1 = [], nums2 = [1]
-Output: 1.00000
-Input: nums1 = [2], nums2 = []
-Output: 2.00000
 
 def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) ->
 float:
