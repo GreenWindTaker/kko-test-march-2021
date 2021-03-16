@@ -1,5 +1,6 @@
 import pandas as pd  # Dataset loading을 위하여
 import numpy as np
+import json
 
 
 class preprocessing(object):
@@ -33,6 +34,9 @@ class preprocessing(object):
         __X = __readDf[__X_header]
         __Y = __readDf[category]
 
+        # 카테고리 편중 확인
+        print(__Y.value_counts())
+
         # Check Category
         self.__set_category(__Y)
 
@@ -51,6 +55,7 @@ class preprocessing(object):
         (zeros)[__get_category] = 1
 
         return zeros
+
 
     def split(self, X, Y, train=0.6, eval=0.3, valid=0.1):
 
@@ -77,3 +82,13 @@ class preprocessing(object):
         __valid_Y = __numpy_Y[__eval_idx_end:]
 
         return (__train_X, __train_Y), (__eval_X, __eval_Y), (__valid_X, __valid_Y)
+
+    def save_category_classifier(self, file_path):
+        if file_path != None:
+
+            try:
+                with open(file_path, 'w') as filedata:
+                    json.dump(self.category_tokenizer, filedata)
+            except Exception as e:
+                print(str(e))
+

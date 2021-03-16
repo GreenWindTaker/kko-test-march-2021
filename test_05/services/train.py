@@ -25,6 +25,7 @@ class training(object):
         return __model
 
     def runTrain(self, model, trainX, trainY, evalX, evalY, validX, validY, savepath=None):
+        # Callback은 tensorlog를 이용하여 구성하나, 추가로
         history_callback = model.fit(trainX, trainY,
                                      epochs=1000,
                                      verbose=0,
@@ -32,6 +33,7 @@ class training(object):
 
         if savepath != None:
             __Save_model = save_model(model, filepath=savepath)
+
         score = model.evaluate(validX, validY, verbose=0)
 
         print('Valid loss :' + str(score[0]))
