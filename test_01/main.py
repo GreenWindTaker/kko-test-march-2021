@@ -3,6 +3,9 @@
 def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) ->
 float:
 
+사용환경 :
+python == 3.7.7
+
 '''
 
 

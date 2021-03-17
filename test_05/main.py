@@ -1,5 +1,12 @@
 '''
 첨부 데이터(problem5.csv)를 이용해 예측합니다.
+Tensorflow (with Keras) 기반으로 코드 구성.
+
+python == 3.7.7
+tensorflow == 2.4.1
+keras == 2.4.3
+pandas == 1.2.2
+
 '''
 
 from test_05.services.preprocessing import preprocessing
@@ -11,10 +18,7 @@ from tensorflow.keras.backend import clear_session
 
 def run_train():
     '''
-    Tensorflow (with Keras) 기반으로 코드 구성.
-    tensorflow ==2.4.1
-    keras == 2.4.3
-    pandas ==1.2.2
+
     '''
 
     print("Train and Run")

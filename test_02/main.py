@@ -2,6 +2,9 @@
 
 def matrixBlockSum(self, matrix: List[List[int]], K: int) ->
 List[List[int]]:
+
+python == 3.7.7
+
 '''
 
 
